@@ -17,25 +17,67 @@ var promptI = lowercaseArray.concat(numbersArray);
 var promptJ = lowercaseArray.concat(specialArray);
 var promptK = numbersArray.concat(specialArray);
 
+var promptResult
+var randomLetters = ""
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-alert("Please choose the following criteria for your password.");
-var characters = prompt("Choose the length of your password, 8-128 characters.");
-var uppercase = prompt("Choose if you want to include uppercase letters.")
-var lowercase = prompt("Choose if you want to include lowercase letters.")
-var numbers = prompt("Choose if you want to include numeric values.")
-var special = prompt("Choose if you want to include special characters.")
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
-
-
-// var password = generatePassword();
-// var passwordText = document.querySelector("#password");
-
-// passwordText.value = password;
+passwordText.value = password;
 }
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+function generatePassword() {
+
+alert("Please choose the following criteria for your password.");
+var characters = Number(prompt("Choose the length of your password, 8-128 characters."));
+var uppercase = confirm("Choose if you want to include uppercase letters.")
+var lowercase = confirm("Choose if you want to include lowercase letters.")
+var numbers = confirm("Choose if you want to include numeric values.")
+var special = confirm("Choose if you want to include special characters.")
+
+if (uppercase && lowercase && numbers && special) {
+  promptResult = promptA;
+} else if (uppercase && lowercase && numbers) {
+  promptResult = promptB;
+} else if (lowercase && numbers && special) {
+  promptResult = promptC;
+} else if (uppercase && numbers && special) {
+  promptResult = promptD;
+} else if (uppercase && lowercase && special) {
+  promptResult = promptE;
+} else if (uppercase && lowercase) {
+  promptResult = promptF;
+} else if (uppercase && numbers) {
+  promptResult = promptG;
+} else if (uppercase && special) {
+  promptResult = promptH;
+} else if (lowercase && numbers) {
+  promptResult = promptI;
+} else if (lowercase && special) {
+  promptResult = promptJ
+} else if (numbers && special) {
+  promptResult = promptK;
+} else if (uppercase) {
+  promptResult = uppercaseArray;
+} else if (lowercase) {
+  promptResult = lowercaseArray;
+} else if (numbers) {
+  promptResult = numbersArray;
+} else if (special) {
+  promptResult = specialArray;
+} else {
+  alert("Please select criteria")
+}
+
+console.log(promptResult);
+
+
+
+}
