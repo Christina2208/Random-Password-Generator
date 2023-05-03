@@ -25,10 +25,8 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-passwordText.value = password;
+  generatePassword();
+  document.querySelector("#password").innerHTML=randomLetters;
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
@@ -76,8 +74,8 @@ if (uppercase && lowercase && numbers && special) {
   alert("Please select criteria")
 }
 
-console.log(promptResult);
-
-
-
+for(var i=0; i < characters; i++) {
+  var passGen = Math.floor(Math.random()* promptResult.length);
+  randomLetters+=promptResult[passGen];
+}
 }
