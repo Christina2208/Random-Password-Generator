@@ -17,11 +17,12 @@ var promptI = lowercaseArray.concat(numbersArray);
 var promptJ = lowercaseArray.concat(specialArray);
 var promptK = numbersArray.concat(specialArray);
 
-var promptResult
-var randomLetters = ""
+var promptResult;
+var randomLetters = "";
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
+var clearBtn = document.querySelector("#clear");
 
 // Write password to the #password input
 function writePassword() {
@@ -30,7 +31,7 @@ function writePassword() {
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
+clearBtn.addEventListener("click", clearPassword);
 function generatePassword() {
 
 alert("Please choose the following criteria for your password.");
@@ -78,4 +79,8 @@ for(var i=0; i < characters; i++) {
   var passGen = Math.floor(Math.random()* promptResult.length);
   randomLetters+=promptResult[passGen];
 }
+}
+// function for clear button
+function clearPassword() {
+  document.querySelector("#password").innerHTML= ""
 }
