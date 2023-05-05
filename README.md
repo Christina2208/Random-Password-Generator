@@ -32,4 +32,4 @@ https://bobbyhadz.com/blog/javascript-clear-textarea-value
 
 ## License
 
-Please refer to the license in the repository.
+Please refer to the license in the github repository.
