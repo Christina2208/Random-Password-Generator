@@ -22,12 +22,6 @@ To install, just click on the deploment link.
 
 To use this website, you just simply click on the deploment link. Then you hit the "Generate Password" button and start entering all the criteria by selecting "ok" or "cancel" for yes and no options, once the password is generated you may copy and paste that for personal use. To clear the password from the text area, simply hit the clear password button. 
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
-
 ## Credits
 
 https://www.ibm.com/docs/en/baw/20.x?topic=security-characters-that-are-valid-user-ids-passwords

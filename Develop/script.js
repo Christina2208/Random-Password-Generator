@@ -1,4 +1,4 @@
-// Assignment code here
+// Arrays created for available user options
 var uppercaseArray = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 var lowercaseArray = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var numbersArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -41,6 +41,7 @@ var lowercase = confirm("Choose if you want to include lowercase letters.")
 var numbers = confirm("Choose if you want to include numeric values.")
 var special = confirm("Choose if you want to include special characters.")
 
+// created if/ else if statements for all the user choices. 
 if (uppercase && lowercase && numbers && special) {
   promptResult = promptA;
 } else if (uppercase && lowercase && numbers) {
@@ -84,3 +85,4 @@ for(var i=0; i < characters; i++) {
 function clearPassword() {
   document.querySelector("#password").innerHTML= ""
 }
+// ^ add a clear text content , replace or remove aimed at text content.
