@@ -85,4 +85,4 @@ for(var i=0; i < characters; i++) {
 function clearPassword() {
   document.querySelector("#password").innerHTML= ""
 }
-// ^ add a clear text content , replace or remove aimed at text content.
+// ^ add a clear textContent , replace or remove aimed at textContent.
